@@ -1,4 +1,5 @@
 import math
+import sys
 import unittest
 
 def area(r):
@@ -21,6 +22,9 @@ def area(r):
             area(3.5)
             > 38.484510006474
     '''
+    if not isinstance(r, (int, float)):
+        sys.exit(-1)
+
     return math.pi * r * r
 
 
@@ -44,28 +48,7 @@ def perimeter(r):
             perimeter(0.5)
             > 3.1415926535897
     '''
-    return 2 * math.pi * r
-
-
-class CircleTestCase(unittest.TestCase):
-    def test_area(self):
-        res = area(3.0)
-        self.assertAlmostEqual(res, 28.274333882308, places=5)
-
-        res = area(3.5)
-        self.assertAlmostEqual(res, 38.484510006474, places=5)
-
-    def test_incorrect_area_input(self):
-        res = area(-1.0)
-        self.assertAlmostEqual(res, 3.1415926535897, places=5)
+    if not isinstance(r, (int, float)):
+        sys.exit(-1)
         
-    def test_perimetr(self):
-        res = perimeter(2.5)
-        self.assertAlmostEqual(res, 15.707963267948966, places=5)
-
-        res = perimeter(0.5)
-        self.assertAlmostEqual(res, 3.1415926535897, places=5)
-
-    def test_incorrect_perimeter_input(self):
-        res = perimeter(-2.5)
-        self.assertAlmostEqual(res, -15.707963267948966, places=5)
+    return 2 * math.pi * r

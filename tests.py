@@ -15,7 +15,7 @@ class CircleTestCase(unittest.TestCase):
 
     def test_incorrect_area_input(self):
         res = circle.area(-1.0)
-        self.assertAlmostEqual(res, 3.1415926535897, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
         
     def test_perimetr(self):
         res = circle.perimeter(2.5)
@@ -26,7 +26,7 @@ class CircleTestCase(unittest.TestCase):
 
     def test_incorrect_perimeter_input(self):
         res = circle.perimeter(-2.5)
-        self.assertAlmostEqual(res, -15.707963267948966, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
 
 
 class RectangleTestCase(unittest.TestCase):
@@ -39,7 +39,7 @@ class RectangleTestCase(unittest.TestCase):
 
     def test_incorrect_area_input(self):
         res = rectangle.area(-1.0, 0.1)
-        self.assertAlmostEqual(res, -0.1, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
         
     def test_perimetr(self):
         res = rectangle.perimeter(3.0, 7.9)
@@ -50,7 +50,7 @@ class RectangleTestCase(unittest.TestCase):
 
     def test_incorrect_perimeter_input(self):
         res = rectangle.perimeter(-2.3, 7.1)
-        self.assertAlmostEqual(res, 9.6, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
 
 class SquareTestCase(unittest.TestCase):
     def test_area(self):
@@ -62,7 +62,7 @@ class SquareTestCase(unittest.TestCase):
 
     def test_incorrect_area_input(self):
         res = square.area(-1.41)
-        self.assertAlmostEqual(res, 1.9881, 5)
+        self.assertAlmostEqual(res, 0, 5)
         
     def test_perimetr(self):
         res = square.perimeter(14.4)
@@ -73,7 +73,7 @@ class SquareTestCase(unittest.TestCase):
 
     def test_incorrect_perimeter_input(self):
         res = square.perimeter(-0.99)
-        self.assertAlmostEqual(res, -3.96, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
 
 class TriangleTestCase(unittest.TestCase):
     def test_area(self):
@@ -85,7 +85,7 @@ class TriangleTestCase(unittest.TestCase):
 
     def test_incorrect_area_input(self):
         res = triangle.area(-1.41, -2)
-        self.assertAlmostEqual(res, 1.41, places=5)
+        self.assertAlmostEqual(res, 0, places=5)
         
     def test_perimetr(self):
         res = triangle.perimeter(4.45, 0.49, 26.2)
