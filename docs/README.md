@@ -67,6 +67,9 @@
         * area(3.0, 7.5) -> 11.25
         * area(3.25, 2.75) -> 4.4
 
+## Тестирование
+* В каждую из библиотек был добавлен тестирующий класс - наследующий от unittest.TestCase.
+
 ## История изменений библиотеки
 * L-03: Circle and square added 
     - 8ba9aeb3cea847b63a91ac378a2a6db758682460
@@ -83,3 +86,6 @@
 * A mistake at triangle.py->perimiter was fixed 
     - 575f03fb0abd1ce598ad1c1bd025b786da8060f4
     - commited on Sep 25, 2024
+* README edited
+    - 4e8f2610b87f285c1e1dac1e7d47048871e16f38
+    - commited on Oct 22, 2024
