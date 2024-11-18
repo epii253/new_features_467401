@@ -1,0 +1,39 @@
+name: CI
+on:
+    push:
+      branches:
+      - '**'
+
+# jobs запускаются параллельно, если не указана последовательность
+jobs:
+    # Название job вы можете назвать как угодно
+    run_ubuntu_test_job:
+      runs-on: ubuntu-latest
+      steps:
+        # Actions от github: проверяет репозиторий, гит и т.д.
+        - uses: actions/checkout@v3
+
+        # Установка Python
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+
+        # Пример однолинейного простого скрипта shell
+        - name: Run test
+          run: python -m unittest tests.py
+    run_window_test_job:
+      runs-on: windows-latest
+      steps:
+        # Actions от github: проверяет репозиторий, гит и т.д.
+        - uses: actions/checkout@v3
+
+        # Установка Python
+        - name: Set up Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.x'
+
+        # Пример однолинейного простого скрипта shell
+        - name: Run test
+          run: python -m unittest tests.py
